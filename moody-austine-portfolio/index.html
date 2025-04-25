@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moody Austine | IS Professional</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="">
+    <style>
+        /* Custom styles */
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('images/technology-photo-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo span {
+            color: #0d6efd;
+        }
+        
+        .hero {
+            padding: 100px 0;
+            flex: 1;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            font-weight: 700;
+        }
+        
+        .hero-content h1 span {
+            color: #0d6efd;
+        }
+        
+        .hero-content h2 {
+            font-size: 1.8rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        
+        .hero-image img {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .quick-links {
+            padding: 60px 0;
+        }
+        
+        .link-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .link-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .link-card i {
+            font-size: 2.5rem;
+            color: #0d6efd;
+            margin-bottom: 20px;
+        }
+        
+        .link-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .link-card a {
+            color: #0d6efd;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
+        /* Loader styles */
+        #page-loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease;
+        }
+        
+        .spinner {
+            width: 70px;
+            height: 70px;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: #0d6efd;
+            animation: spin 1s ease-in-out infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* Animation delays */
+        .slide-in-left { animation: slideInLeft 1s ease-out; }
+        .slide-in-right { animation: slideInRight 1s ease-out; }
+        .fade-in { animation: fadeIn 1.5s ease-out; }
+        .fade-in-delay { animation: fadeIn 1.5s ease-out 0.5s forwards; opacity: 0; }
+        .scale-in { animation: scaleIn 1s ease-out; }
+        .flip-in { animation: flipIn 1s ease-out; }
+        .flip-in-delay { animation: flipIn 1s ease-out 0.3s forwards; opacity: 0; }
+        .flip-in-more-delay { animation: flipIn 1s ease-out 0.6s forwards; opacity: 0; }
+        
+        @keyframes slideInLeft {
+            from { transform: translateX(-50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes slideInRight {
+            from { transform: translateX(50px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        @keyframes flipIn {
+            from { transform: rotateY(90deg); opacity: 0; }
+            to { transform: rotateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="spinner"></div>
+    </div>
+
+    <header class="fixed-top bg-dark bg-opacity-75">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="logo navbar-brand">Moody<span>Austine</span></div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link active" href="index.html"><i class="fas fa-home me-2"></i>Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html"><i class="fas fa-user me-2"></i>About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html"><i class="fas fa-cogs me-2"></i>Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="education.html"><i class="fas fa-graduation-cap me-2"></i>Education</a></li>
+                        <li class="nav-item"><a class="nav-link" href="certifications.html"><i class="fas fa-certificate me-2"></i>Certifications</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html"><i class="fas fa-envelope me-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="slide-in-left">Hello, I'm <span>Moody Austine</span></h1>
+                        <h2 class="slide-in-right"><i class="fas fa-laptop-code me-2"></i>Information Systems Professional</h2>
+                        <p class="fade-in">
+                            <i class="fas fa-graduation-cap me-2"></i>Diploma in Computer Information Systems | 
+                            <i class="fas fa-file-excel me-2"></i>Excel Specialist | 
+                            <i class="fas fa-tools me-2"></i>Hardware Technician |
+                            <i class="fas fa-network-wired me-2"></i>Network Engineer |
+                            <i class="fas fa-code me-2"></i>Programming Expert |
+                            <i class="fas fa-database me-2"></i>Database and Design Expert
+                        </p>
+                        <div class="cta-buttons fade-in-delay mt-4">
+                            <a href="contact.html" class="btn btn-primary btn-lg me-3">
+                                <i class="fas fa-briefcase me-2"></i>Hire Me
+                            </a>
+                            <a href="projects.html" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-project-diagram me-2"></i>View Projects
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="hero-image scale-in text-center">
+                        <img src="images/Best Data Analytics Training in Kerala – Upskill with Zoople Technologies.jpg" alt="Moody Austine" class="img-fluid rounded-circle border border-4 border-primary" style="max-width: 350px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-links">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="link-card flip-in">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>IT Services</h3>
+                        <p>Hardware maintenance, network configuration, and system support</p>
+                        <a href="services.html" class="btn btn-outline-light mt-3">
+                            <i class="fas fa-arrow-right me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="link-card flip-in-delay">
+                        <i class="fas fa-file-excel"></i>
+                        <h3>Excel Solutions</h3>
+                        <p>Data analysis, automation, and spreadsheet solutions</p>
+                        <a href="services.html" class="btn btn-outline-light mt-3">
+                            <i class="fas fa-arrow-right me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="link-card flip-in-more-delay">
+                        <i class="fas fa-headset"></i>
+                        <h3>Virtual Assistance</h3>
+                        <p>Administrative support and business process automation</p>
+                        <a href="services.html" class="btn btn-outline-light mt-3">
+                            <i class="fas fa-arrow-right me-2"></i>Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark bg-opacity-75 py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2025 Moody Austine. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-github fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+        // Page loader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('page-loader').style.opacity = '0';
+                setTimeout(function() {
+                    document.getElementById('page-loader').style.display = 'none';
+                }, 500);
+            }, 1000); // Adjust time as needed
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Navbar background change on scroll
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('header');
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-dark');
+                navbar.classList.remove('bg-opacity-75');
+            } else {
+                navbar.classList.add('bg-opacity-75');
+            }
+        });
+    </script>
+</body>
+</html> 

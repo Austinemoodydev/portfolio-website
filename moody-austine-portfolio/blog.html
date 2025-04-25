@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Moody Austine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Moody<span>Austine</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="education.html">Education</a></li>
+                    <li><a href="certifications.html">Certifications</a></li>
+                    <li><a href="blog.html" class="active">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1 class="slide-in-left">My Blog</h1>
+            <p class="fade-in">Thoughts, tips, and insights on technology</p>
+        </div>
+    </section>
+
+    <section class="blog-categories">
+        <div class="container">
+            <div class="category-buttons">
+                <button class="active" data-filter="all">All Articles</button>
+                <button data-filter="excel">Excel Tips</button>
+                <button data-filter="hardware">Hardware</button>
+                <button data-filter="career">Career Advice</button>
+                <button data-filter="technology">Technology</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-posts">
+        <div class="container">
+            <div class="blog-card" data-category="excel">
+                <div class="blog-image">
+                    <img src="images/project1.jpg" alt="Excel Tips">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">Excel Tips</span>
+                        <span class="date">June 15, 2023</span>
+                    </div>
+                    <h3>5 Advanced Excel Functions That Will Save You Hours</h3>
+                    <p>Discover powerful Excel functions that can automate your workflows and make data analysis more efficient...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="hardware">
+                <div class="blog-image">
+                    <img src="images/project2.jpg" alt="Hardware Maintenance">
+                </div>
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">Hardware</span>
+                        <span class="date">May 28, 2023</span>
+                    </div>
+                    <h3>Essential Computer Maintenance Tips for Longevity</h3>
+                    <p>Learn simple maintenance practices that can extend the life of your computer and prevent common issues...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="career">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">Career Advice</span>
+                        <span class="date">April 10, 2023</span>
+                    </div>
+                    <h3>Building a Successful IT Career in Kenya: My Journey</h3>
+                    <p>Sharing my personal experiences and lessons learned while building an IT career in the Kenyan market...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="technology">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">Technology</span>
+                        <span class="date">March 22, 2023</span>
+                    </div>
+                    <h3>The Future of Remote Work in Kenya's Tech Industry</h3>
+                    <p>Exploring how remote work is transforming Kenya's tech landscape and what it means for professionals...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="excel">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">Excel Tips</span>
+                        <span class="date">February 15, 2023</span>
+                    </div>
+                    <h3>Creating Dynamic Dashboards in Excel: A Step-by-Step Guide</h3>
+                    <p>A practical tutorial on building interactive dashboards that can transform your data reporting...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+
+            <div class="blog-card" data-category="hardware">
+                <div class="blog-content">
+                    <div class="blog-meta">
+                        <span class="category">Hardware</span>
+                        <span class="date">January 30, 2025</span>
+                    </div>
+                    <h3>Budget-Friendly Computer Upgrades That Make a Difference</h3>
+                    <p>Cost-effective hardware upgrades that can significantly improve your computer's performance...</p>
+                    <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated With My Latest Articles</h2>
+            <p>Subscribe to my newsletter to receive new posts directly in your inbox</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Moody Austine. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
